@@ -7,6 +7,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:logging/logging.dart' hide Level;
+// nuke provider after flame is done
 import 'package:provider/provider.dart';
 
 import '../ads/ads_controller.dart';
@@ -62,6 +63,8 @@ class _PlaySessionScreenState extends State<PlaySessionScreen> {
             children: [
               Center(
                 // This is the entirety of the "game".
+                // flame thing goes here I think
+                // see https://github.com/ufrshubham/spacescape
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
