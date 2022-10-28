@@ -29,6 +29,7 @@ dependencies:
   games_services: ^3.0.0  # Achievements and leaderboards
   google_mobile_ads: ^2.0.1  # Ads
   in_app_purchase: ^3.0.1  # In-app purchases
+  flame: ^1.4.0 # game engine
 
 dev_dependencies:
   flutter_test:
@@ -45,6 +46,7 @@ flutter:
     - assets/images/
     - assets/music/
     - assets/sfx/
+    - assets/images/rogue_shooter/
 
   fonts:
     - family: Permanent Marker

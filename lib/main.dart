@@ -7,6 +7,9 @@
 // import 'package:firebase_core/firebase_core.dart';
 // import 'firebase_options.dart';
 
+// flame engine
+import 'package:flame/game.dart'; 
+
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +23,7 @@ import 'src/app_lifecycle/app_lifecycle.dart';
 import 'src/audio/audio_controller.dart';
 import 'src/crashlytics/crashlytics.dart';
 import 'src/games_services/games_services.dart';
+import 'src/game_internals/rogue_shooter_game.dart';
 import 'src/games_services/score.dart';
 import 'src/in_app_purchase/in_app_purchase.dart';
 import 'src/level_selection/level_selection_screen.dart';
@@ -133,9 +137,11 @@ class MyApp extends StatelessWidget {
           routes: [
             GoRoute(
                 path: 'play',
+                // replace widget here with flame game?
                 pageBuilder: (context, state) => buildMyTransition<void>(
-                      child: const LevelSelectionScreen(
-                          key: Key('level selection')),
+                      child: GameWidget(game: RogueShooterGame()),
+                      // child: const LevelSelectionScreen(
+                      //     key: Key('level selection')),
                       color: context.watch<Palette>().backgroundLevelSelection,
                     ),
                 routes: [
