@@ -64,7 +64,7 @@ class RogueShooterGame extends FlameGame
               adsController?.preloadAd();
               return Material.Center(
                 child: Material.ElevatedButton(
-                  child: const Material.Text('Open route'),
+                  child: const Material.Text('Game Over'),
                   onPressed: () {
                     // Navigate to second route when tapped.
                     var gameScore = Score(

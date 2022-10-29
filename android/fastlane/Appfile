@@ -1,0 +1,2 @@
+json_key_file("fastlane/pc-api-7819418006086265513-297-e77af509d453.json") # Path to the json secret file - Follow https://docs.fastlane.tools/actions/supply/#setup to get one
+package_name("com.friendlyuser.space_shooter") # e.g. com.krausefx.app
