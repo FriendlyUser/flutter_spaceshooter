@@ -23,3 +23,5 @@ Base64 data
 ```bash
 cat key.properties | base64 -w 0
 ```
+
+This will base64 encode files without newlines for you to copy as you see fit.
