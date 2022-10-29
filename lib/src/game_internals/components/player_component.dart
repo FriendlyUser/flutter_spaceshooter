@@ -1,11 +1,12 @@
 import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
+import '../rogue_shooter_game.dart';
 import './bullet_component.dart';
 import './enemy_component.dart';
 import './explosion_component.dart';
 
 class PlayerComponent extends SpriteAnimationComponent
-    with HasGameRef, CollisionCallbacks {
+    with HasGameRef<RogueShooterGame>, CollisionCallbacks {
   late TimerComponent bulletCreator;
 
   PlayerComponent()
@@ -67,6 +68,7 @@ class PlayerComponent extends SpriteAnimationComponent
       other.takeHit();
       // gameRef end game and go to game over screen?
       // should be able to save high score to google play achievements
+      gameRef.endGame();
     }
   }
 }

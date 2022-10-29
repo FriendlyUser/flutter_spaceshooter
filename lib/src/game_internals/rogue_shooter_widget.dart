@@ -7,6 +7,7 @@ class RogueShooterWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final gameOverOverlayIdentifier = 'GameOverMenu';
     return GameWidget(
       game: RogueShooterGame(),
       loadingBuilder: (_) => const Center(

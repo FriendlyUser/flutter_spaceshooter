@@ -4,6 +4,9 @@ import 'package:flame/game.dart';
 import './components/enemy_creator.dart';
 import './components/player_component.dart';
 import './components/star_background_creator.dart';
+import './components/bullet_component.dart';
+import './components/enemy_component.dart';
+import './components/explosion_component.dart';
 
 class RogueShooterGame extends FlameGame
     with PanDetector, HasCollisionDetection {
@@ -71,5 +74,28 @@ class RogueShooterGame extends FlameGame
 
   void increaseScore() {
     score++;
+  }
+
+  void endGame() {
+    // score = 0;
+    // set user back to starting position
+    player.position = Vector2(100, 500);
+    // player position center of screen
+    player.stopFire();
+    children.whereType<EnemyComponent>().forEach(remove);
+    // remove all bullets
+    children.whereType<BulletComponent>().forEach(remove);
+    // remove all explosions
+    children.whereType<ExplosionComponent>().forEach(remove);
+    // remove enemy creator
+    children.whereType<EnemyCreator>().forEach(remove);
+    // remove star background creator
+    children.whereType<StarBackGroundCreator>().forEach(remove);
+
+    // remove StarComponent
+    pauseEngine();
+    // go to game won screen
+
+    print('Game Over');
   }
 }
