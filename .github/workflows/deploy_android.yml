@@ -25,7 +25,7 @@ jobs:
           channel: 'stable'
 
       - name: Decode android/neumodore_key.jks
-        run: echo "${{ secrets.KEYSTORE_JKS_PROD }}" | base64 --decode > android/flutter.jks
+        run: echo "${{ secrets.KEYSTORE_JKS_PROD }}" | base64 --decode > android/app/flutter.jks
 
       - name: Decode android/key.properties
         run: echo "${{ secrets.KEY_PROPERTIES_PROD }}" | base64 --decode > android/key.properties
