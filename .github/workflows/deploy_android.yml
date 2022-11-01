@@ -74,4 +74,4 @@ jobs:
           packageName: com.friendlyuser.appspace_shooter
           releaseFile: app-release.aab
           track: internal
-          whatsNewDirectory: distribution/whatsnew
+          # whatsNewDirectory: distribution/whatsnew
