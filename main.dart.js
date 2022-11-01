@@ -75924,7 +75924,7 @@ if(p.c==null){s=1
 break}p.ai(new A.ahi(p))
 o=p.c
 if(o==null){s=1
-break}o=A.aF(o).r===B.S?"ca-app-pub-3940256099942544/6300978111":"ca-app-pub-3940256099942544/2934735716"
+break}o=A.aF(o).r===B.S?"ca-app-pub-2479144310234386/1937776000":"ca-app-pub-3940256099942544/2934735716"
 n=new A.Z3(new A.ahj(p),new A.ahk(),null,null,null,new A.ahl(),new A.ahm(),null)
 o=new A.Hm(B.xJ,B.xK,n,n,o)
 p.d=o
